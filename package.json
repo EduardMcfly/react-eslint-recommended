@@ -12,10 +12,14 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "postinstall": "husky install",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install",
+    "eslint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
+    "eslint:fix": "eslint --ext .js,.jsx,.ts,.tsx ./src --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -37,10 +41,11 @@
   },
   "devDependencies": {
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-promise": "^5.1.1",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "husky": "^7.0.0",
     "prettier": "^2.4.1"
   }
 }
